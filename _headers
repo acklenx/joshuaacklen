@@ -8,8 +8,7 @@
   Permissions-Policy: geolocation=(), camera=(), microphone=(), usb=(), payment=()
   Strict-Transport-Security: max-age=31536000
 
-# Content-Security-Policy is enforced on the home page; still Report-Only
-# on the resume page (pending a visual check of the compiled resume.css).
+# Content-Security-Policy is enforced on every page.
 # Each inline <script> is allowed by its SHA-256 hash, not 'unsafe-inline'.
 # https://static.cloudflareinsights.com is Cloudflare Web Analytics (auto-injected).
 
@@ -21,6 +20,6 @@
 
 # Resume page — loads Google Fonts and a compiled resume.css (no runtime CDN).
 /resume.html
-  Content-Security-Policy-Report-Only: default-src 'self'; script-src 'self' 'sha256-QVQo+myCtXcJTIHKIxXHpQ47Z2XmXfhfxOCNgHWLIL4=' https://static.cloudflareinsights.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://cloudflareinsights.com; object-src 'none'; base-uri 'self'; frame-ancestors 'none'
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'sha256-QVQo+myCtXcJTIHKIxXHpQ47Z2XmXfhfxOCNgHWLIL4=' https://static.cloudflareinsights.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://cloudflareinsights.com; object-src 'none'; base-uri 'self'; frame-ancestors 'none'
 /resume
-  Content-Security-Policy-Report-Only: default-src 'self'; script-src 'self' 'sha256-QVQo+myCtXcJTIHKIxXHpQ47Z2XmXfhfxOCNgHWLIL4=' https://static.cloudflareinsights.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://cloudflareinsights.com; object-src 'none'; base-uri 'self'; frame-ancestors 'none'
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'sha256-QVQo+myCtXcJTIHKIxXHpQ47Z2XmXfhfxOCNgHWLIL4=' https://static.cloudflareinsights.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://cloudflareinsights.com; object-src 'none'; base-uri 'self'; frame-ancestors 'none'
