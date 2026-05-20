@@ -1,0 +1,12 @@
+{
+  "name": "joshuaacklen",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Build tooling for joshuaacklen.com — compiles resume.css from Tailwind.",
+  "scripts": {
+    "build:css": "tailwindcss -o resume.css --minify"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.0"
+  }
+}
