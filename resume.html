@@ -309,7 +309,7 @@
 
 				<div class="flex gap-4 justify-between" id="modal-actions">
 					<button id="btn-close" class="flex-1 px-4 py-2 bg-slate-700 hover:bg-slate-600 text-white rounded transition-colors border border-slate-500 font-mono text-sm">Close</button>
-					<button id="btn-hire" onclick="hireJosh()" class="flex-1 px-4 py-2 bg-green-600 hover:bg-green-500 text-white rounded transition-colors border border-green-400 font-mono text-sm font-bold shadow-lg shadow-green-900/50">Hire Josh</button>
+					<button id="btn-hire" class="flex-1 px-4 py-2 bg-green-600 hover:bg-green-500 text-white rounded transition-colors border border-green-400 font-mono text-sm font-bold shadow-lg shadow-green-900/50">Hire Josh</button>
 				</div>
 			</div>
 		</div>
@@ -467,6 +467,8 @@
 						hireJosh();
 					}, 800);
 				});
+
+				btnHire.addEventListener('click', () => hireJosh());
 
 				// Hire Josh Logic
 				window.hireJosh = function() {
