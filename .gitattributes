@@ -1,0 +1,8 @@
+# Enforce LF line endings for all text files — in the repository and on
+# checkout. This overrides each contributor's core.autocrlf, so line
+# endings stay consistent regardless of OS or local git config.
+* text=auto eol=lf
+
+# Binary assets: never apply line-ending conversion or text diffing.
+*.png binary
+*.pdf binary
